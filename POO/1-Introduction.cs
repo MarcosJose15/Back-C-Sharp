@@ -75,8 +75,31 @@ namespace Introducao_a_programacao_orientada_a_objetos
             
     }
 
-    internal class Introducao_a_programacao_orientada_a_objetos
+    internal class Program
     {
+        static void Main(string[] args)
+        {
+            //Criando um carro baseado na Class Carro
+            Carro hondaFit = new Carro();
+            hondaFit.Marca = "Honda";
+            hondaFit.Modelo = "Fit";
+            //Chamando método
+            hondaFit.LigarCarro();
+            hondaFit.AcelerarCarro(80);
+            hondaFit.PararCarro();
+            hondaFit.DesligarCarro();
 
+            Carro fiatUno = new Carro();
+            fiatUno.Marca = "Fiat";
+            fiatUno.Modelo = "Uno";
+            //Chamando método
+            fiatUno.AcelerarCarro(80);
+            fiatUno.LigarCarro();
+            fiatUno.AcelerarCarro(80);
+            fiatUno.PararCarro();
+            fiatUno.DesligarCarro();
+
+            Console.Readkey();
+        }
     }
 }

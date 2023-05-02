@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32519.379
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Heranca classe abstrata", "Heranca classe abstrata\Heranca classe abstrata.csproj", "{B8DB0147-C88F-4695-8A67-F291834F0EF2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B8DB0147-C88F-4695-8A67-F291834F0EF2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8DB0147-C88F-4695-8A67-F291834F0EF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8DB0147-C88F-4695-8A67-F291834F0EF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8DB0147-C88F-4695-8A67-F291834F0EF2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9284DCB7-CF7B-43DB-8DAC-6DD6D6D1D5CA}
+	EndGlobalSection
+EndGlobal

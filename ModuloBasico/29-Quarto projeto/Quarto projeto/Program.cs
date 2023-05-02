@@ -29,10 +29,13 @@ namespace Quarto_projeto
                     DadosCadastrais_Strcut dadosCadastrais;
                     Console.WriteLine("Digite o nome completo:");
                     dadosCadastrais.Nome = Console.ReadLine();
+
                     Console.WriteLine("Digite o nome da rua:");
                     dadosCadastrais.NomeDaRua = Console.ReadLine();
+
                     Console.WriteLine("Digite o número da casa:");
                     dadosCadastrais.NumeroDaCasa = Convert.ToUInt32(Console.ReadLine());
+                    
                     Console.WriteLine("Digite número do documento");
                     dadosCadastrais.NumeroDoDocumento = Console.ReadLine();
                     ListaDeCadastros.Add(dadosCadastrais);

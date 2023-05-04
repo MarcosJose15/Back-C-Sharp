@@ -24,7 +24,20 @@ app.MapGet("/getmeuProduto/{code}", ([FromRoute]string codigo) => {
     return codigo;
 });
 
+app.MapGet("/getproductbyheader", (HttpRequest request) => {
+    return request.Headers["produto-codigo"].ToString();
+});
+
 app.Run();
+
+public class RepositorioDeProduto {
+    public List<Produto> Produtos { get; set; }
+
+    public void Add(Produto produto){
+    if (Produtos == null)
+        Produtos = new List<Produto>();
+    }
+}
 
 
 public class Produto{

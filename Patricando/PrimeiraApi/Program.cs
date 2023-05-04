@@ -31,18 +31,18 @@ app.MapGet("/getproductbyheader", (HttpRequest request) => {
 app.Run();
 
 
-//Repositorio de dados
-public class RepositorioDeProduto {
-    public List<Produto> Produtos { get; set; }
+//Repositorio de dados (Salvar e Obter Produto)
+public static class RepositorioDeProduto {
+    public static List<Produto> Produtos { get; set; }
 
-    public void Add(Produto produto){
+    public static void Add(Produto produto){
     if (Produtos == null)
         Produtos = new List<Produto>();
 
         Produtos.Add(produto);
     }
 
-    public Produto GetBy(string codigo){
+    public static Produto GetBy(string codigo){
         return Produtos.First(p => p.codigo == codigo);
     }
 }

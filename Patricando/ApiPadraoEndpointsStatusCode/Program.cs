@@ -6,7 +6,7 @@ var app = builder.Build();
 app.MapPost("/produtos", (Produto produto) =>{
     RepositorioDeProduto.Add(produto);
     //Padrao status code (POST = CREATED)
-    return Results.Created("/produtos" + produto.codigo, produto.codigo);
+    return Results.Created($"/produtos{produto.codigo}", produto.codigo);
 });
 
 //api.app.com/user/{code}
@@ -23,12 +23,22 @@ app.MapPut("/produtos", (Produto produto) =>
 {
     var meuProdutoSalvo = RepositorioDeProduto.GetBy(produto.codigo);
     meuProdutoSalvo.Nome = produto.Nome;
+    //Return status 200 - Ok
+    return Results.Ok();
 });
 
 app.MapDelete("/produtos/{codigo}", ([FromRoute] string codigo) =>
 {
     var meuProdutoSalvo = RepositorioDeProduto.GetBy(codigo);
     RepositorioDeProduto.Remove(meuProdutoSalvo);
+    //Return status 200 - Ok
+    return Results.Ok();
+});
+
+
+//Achar Banco de dados
+app.MapGet("/configuration/database", (IConfiguration configuration) => {
+    return Results.Ok($"{configuration["database:connection"]}/{configuration["database:port"]}");
 });
 
 app.Run();

@@ -30,12 +30,20 @@ app.MapGet("/getproductbyheader", (HttpRequest request) => {
 
 app.Run();
 
+
+//Repositorio de dados
 public class RepositorioDeProduto {
     public List<Produto> Produtos { get; set; }
 
     public void Add(Produto produto){
     if (Produtos == null)
         Produtos = new List<Produto>();
+
+        Produtos.Add(produto);
+    }
+
+    public Produto GetBy(string codigo){
+        return Produtos.First(p => p.codigo == codigo);
     }
 }
 

@@ -47,13 +47,10 @@ app.Run();
 //Repositorio de dados (Salvar e Obter Produto)
 public static class RepositorioDeProduto
 {
-    public static List<Produto> ListaDeProdutos { get; set; }
+    public static List<Produto> ListaDeProdutos { get; set; } = ListaDeProdutos = new List<Produto>();
 
     public static void Add(Produto produto)
     {
-        if (ListaDeProdutos == null)
-            ListaDeProdutos = new List<Produto>();
-
         ListaDeProdutos.Add(produto);
     }
     public static Produto GetBy(string codigo)
